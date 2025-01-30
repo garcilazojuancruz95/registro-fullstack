@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/CSS/style-register.css">
+    <link rel="stylesheet" href="./CSS/style-register.css">
 </head>
 <body>
     <div class="register-container">
         <h1>Registrarse</h1>
         <form id="register-form">
             <div class="form-group">
-                <label for="username">Usuario</label>
+                <label for="username">User</label>
                 <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
             </div>
             <div class="form-group">
                 <label for="email">Correo Electronico</label>
-                <input type="text" id="email" name="email" placeholder="Ingrese su correo electronico" required>
+                <input type="email" id="email" name="email" placeholder="Ingrese su correo electronico" required>
             </div>
             <div class="form-group">
                 <label for="password">Contrasena</label>
@@ -24,14 +24,22 @@
             </div>
             <div class="form-group">
                 <label for="confirm-password">Confirmar Contrasena</label>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme su contrasena">
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme su contrasena" required>
             </div>
             <button type="submit" class="register-btn">Registrarse</button>
         </form>
 
-        <script src="../JS/register.js"></script>
+        <div id="usernameError" style="color: red; margin-top: 10px;"></div>
+        <div id="passwordError" style="color: red; margin-top: 10px;"></div>
+        <div id="emailError" style="color: red; margin-top: 10px;"></div>
+
+        <div id="success-message" style="color: green; margin-top: 10px; display: none;">
+            Registro exitoso. ¡Puedes iniciar sesión ahora!
+        </div>
+
+        <script src="./JS/register.js"></script>
         
-        <p>Ya tienes una cuenta? <a href="/Pages/login.html">Inicia sesion</a></p>
+        <p>Ya tienes una cuenta? <a href="login.html">Inicia sesion</a></p>
     </div>
 </body>
 </html>
